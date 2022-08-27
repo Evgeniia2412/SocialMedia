@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* Нет прокрутки по горизонтали */
+    overflow-x: hidden;
+}
+
+/* Два следующих селектора убирают некрасивое выделение для гиперссылок */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:checked {
+    color: #000;
+}
+
+header {
+    /* Делаем header блоком ( флекс - одна из его разновидностей, так как он по сути является оболочкой, и более ничем 
+    ( почти все новые теги из html5 делают тоже самое ) */
+    display: flex;
+    background: rgb(185, 178, 234);
+    /* Ширина - на весь экран */
+    width: auto;
+    height: 45px;
+}
+
+/* Это наша оболочка для логотипа */
+header a {
+    /* Высота должна соответствовать картинке, иначе будет появляться неприятная полоса прокрутки 
+    ( можно убрать с помощью overflow-y:hidden ) */
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header a img {
+    width: 50px;
+    margin: 5px;
+}
+
+aside {
+    background: #aaa;
+    height: 400px;
+    width: 200px;
+}
+
+nav {
+    background: #bbb;
+    height: 400px;
+    width: 200px;
+}
+
+section.main {
+    /* display:flex для главного раздела - хорошее отображение элементов внутри него 
+        Также внутри помощника разработчика (F12 в браузере) выбираем подходящие для нашего сайта параметры */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background: #ccc;
+    width: auto;
+    height: 400px;
+}
+
+footer {
+    background: #ddd;
+    width: auto;
+    height: 200px;
+}
+
